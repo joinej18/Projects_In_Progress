@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Redacted+Script:wght@300;400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Alooflex</title>
+  </head>
+  
+  <body class="strength">
+    <header id="main-header">
+    <nav class="navbar">
+      <div>
+         <h1 class="logo"> Alooflex </h1>
+         </div>
+        <div>
+      <ul>
+        <li><a href="/html/openingPage.html">Home</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="/index.html">Excercises</a>
+          <!-- <ul>
+            <li>Strength Training
+              <ul>
+                <li><a href="#">Strongman</a></li>
+                <li><a href="#">Powerlifting</a></li>
+                <li><a href="#">Strength</a></li>
+                <div class="bottom"></div>
+                <li><a href="#">Olympic Weightlifting</a></li>
+              </ul>
+            </li>
+            <li>Cardio</li>
+            <li><a href="#">Stretching</a>
+              <ul><li><a href="#">Plyometrics</a></li></ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="/html/excercises.html">Workout</a></li>
+         <li><a href="/html/progressPage.html">Progress</a></li>
+        
+      </ul>
+      </div>
+    </nav>
+    </header>
+    <section class="profile-section">
+      <div class="profile">
+        <h3>Your Name</h3>
+        <div class="photo"><img src="" alt="" /> The image goes here</div>
+      </div>
+
+         <div class="user-metrics">
+            <h3>USER Metrics</h3>
+        <div class="user-info">
+        <label for="weight" id="cur-weight">Current Weight</label>
+        <input type="number" class="weight" required minlength="3" maxlength="4" size="6" placeholder="Enter current Weight"/>
+      
+        <label for="goal-weight" id="goal-weight">Goal Weight</label>
+        <input type="number" class="weight" required minlength="3" maxlength="4" size="6"/>
+        <label for="body-fat"><h3>Body Fat %</h3><p></p></label>
+        <label for="fat-free"><h3>Fat Free Mass Index</h3><p></p></label>
+        </div>
+        <div>
+        <p>Select a date that you would like to start you workout journey!</p>
+        <h4>Workout Schedule</h4>
+        <select name="Schedule" id="workout-schedule">
+            <option value="beginner">beginner</option>
+            <option value="intermediate">intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <h4>Start Date</h4>
+        <input type="date" class="date" />
+      </div>
+
+
+    <div class="photo-section">
+        <img src="" alt="">
+        <p>Date:</p>
+        <p>Muscle Group:</p>
+        
+    </div>
+
+<div><button type="submit" class="submit">Submit</button></div>
+        
+        <h4 id="advice">Advice:</h4>
+        <p>
+    <ul><li>1. The date should not be on a Monday or Sunday. Everyone goes to the gym on Monday to start their week</li>
+    <ul><li>2. The date should not be on a Friday or Saturday. Everyone goes to the gym on Friday to end their week and start their weekend</li>
+    <li>3. DO NOT start at the beginning of the month of the end because you will be looking at the date rather than the day</li>
+    <li>4. DO NOT lift with your EGO, it will ruin the experience of being in the gym.</li></ul>
+        </p>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer" class="py-2">
+      <div class="container footer-container">
+        <div>
+          <h3>Email Newsletter</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <form name="contact" method="POST" netlify-data="true">
+            <input name="email" type="email" placeholder="Enter Email..." />
+            <input type="submit" value="Subscribe" class="btn btn-primary" />
+          </form>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="list">
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+
+            <li>
+              <i class="fa-brands fa-instagram fa-1x"></i
+              ><a href="" class="social"></a>
+            </li>
+            <li>
+              <i class="fa-brands fa-twitter fa-1x"></i
+              ><a href="" class="social"></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Join Our Club</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi,
+            corporis!
+          </p>
+          <a href="" class="btn btn-secondary">Join Now!</a>
+        </div>
+        <div>
+          <p>Copyright &copy; 2019 All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../js/controller.js"></script>
+  </body>
+</html>

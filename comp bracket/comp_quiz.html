@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="comp_style.css" />
+    <title>Competitor Quiz</title>
+  </head>
+  <body>
+    <div id="nav-container">
+      <nav class="navbar">
+        <div class="left">
+          <p class="title">Primal Competitor</p>
+          <p>Enter the password</p>
+          <input type="password" id="pwd" name="pwd" />
+        </div>
+        <div class="right">
+          <a href="#">Bracket Page</a>
+        </div>
+      </nav>
+    </div>
+    <div class="bottom"></div>
+    <section>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="quest">
+          <p class="question">Please enter your name</p>
+          <input type="text" id="name" name="name" />
+          <a href="#" class="button-save-name">Save</a>
+        </div>
+
+        <!-- <div id="btn-container"> -->
+        <button id="back">prev</button>
+        <button id="forward">next</button>
+        <!-- </div> -->
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question-2">
+          <p class="question">Enter your Age</p>
+          <input type="integer" id="age" name="age" />
+          <a href="#" class="button-save-age">Save</a>
+        </div>
+
+        <!-- <div id="btn-container"> -->
+        <!-- <button id="back">prev</button>
+        <button id="forward">next</button> -->
+        <!-- </div> -->
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question 3">
+          <p class="question">Competing Weight</p>
+          <input type="text" id="weight" name="weight" />
+          <span><a href="#" class="button-save-weight">Save</a></span>
+        </div>
+        <div id="btn-container">
+          <button id="back">prev</button>
+          <button id="forward">next</button>
+        </div>
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question 4">
+          <p class="question">Years Training</p>
+          <input type="text" id="years" name="years" />
+          <span><a href="#" class="button-save-years">Save</a></span>
+        </div>
+        <div id="btn-container">
+          <button id="back">prev</button>
+          <button id="forward">next</button>
+        </div>
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question 5">
+          <p class="question">Martial Arts Training</p>
+          <input type="text" id="martial-arts" name="martial-arts" />
+          <span><a href="#" class="button-save-arts">Save</a></span>
+        </div>
+        <div id="btn-container">
+          <button id="back">prev</button>
+          <button id="forward">next</button>
+        </div>
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question-6">
+          <p class="question">Competiions Completed</p>
+          <input type="text" id="comps" name="comps" />
+          <span><a href="#" class="button-save-comps">Save</a></span>
+        </div>
+        <div id="btn-container">
+          <button id="back">prev</button>
+          <button id="forward">next</button>
+        </div>
+      </div>
+      <div id="quiz-container" class="shown">
+        <div id="question-container" class="question-7">
+          <p class="question">BJJ Belt Level</p>
+          <select name="belt-lvl" id="belt=lvl">
+            <option value="default">Select A Belt</option>
+            <option value="white-belt">White</option>
+            <option value="blue-belt">Blue</option>
+            <option value="purple-belt">Purple</option>
+            <option value="brown-belt">Brown</option>
+            <option value="black-belt">Black</option>
+          </select>
+          <span><a href="#" class="button-save-belt">Save</a></span>
+        </div>
+        <div id="btn-container">
+          <button id="back">prev</button>
+          <button id="forward">next</button>
+        </div>
+      </div>
+    </section>
+    <script src="comp.js"></script>
+  </body>
+</html>

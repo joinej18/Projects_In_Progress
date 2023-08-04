@@ -1,0 +1,12 @@
+.workout-container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 2rem;
+  /* position: relative; */
+}
+
+.excercise {
+  /* position: absolute; */
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
