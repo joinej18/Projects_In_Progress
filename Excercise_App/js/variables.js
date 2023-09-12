@@ -11,6 +11,7 @@ export const parentEl = document.querySelector(".workout-container");
 export const strengthType = document.querySelector("#type");
 export const difficultyType = document.querySelector("#difficulty");
 export const showAllBttn = document.querySelector(".submit");
+export const resetBttn = document.querySelector(".reset");
 export const workoutCard = document.querySelector(".workout-card");
 export const searchTitle = document.querySelector(".search-title");
 export const btnSubmitWorkout = document.querySelector(".submit-container");
@@ -18,39 +19,34 @@ export const cardio = document.querySelector(".cardio-btn");
 export const strecthing = document.querySelector(".strecthing-btn");
 export const strength = document.querySelector(".strength-btn");
 export const reset = document.querySelector(".reset-btn");
+export const resetURLBTN = document.querySelector(".resetURL");
 export const checkbox = document.getElementById("workout-option");
 cardio.addEventListener("click", function (e) {
   container.style.backgroundColor = "red";
-  strecthing.style.display = "none";
-  strength.style.display = "none";
-  reset.style.display = "flex";
+  strecthing.style.backgroundColor = "blue";
+  strength.style.backgroundColor = "blue";
+  cardio.style.backgroundColor = "red";
+  // reset.style.display = "flex";
 });
 strecthing.addEventListener("click", function (e) {
+  strecthing.style.backgroundColor = "green";
   container.style.backgroundColor = "green";
-  cardio.style.display = "none";
-  strength.style.display = "none";
-  reset.style.display = "flex";
+  strength.style.backgroundColor = "blue";
+  cardio.style.backgroundColor = "blue";
+  // reset.style.display = "flex";
 });
-reset.addEventListener("click", function (e) {
+resetURLBTN.addEventListener("click", function (e) {
   container.style.backgroundColor = "white";
-  strecthing.style.display = "flex";
-  strength.style.display = "flex";
-  reset.style.display = "none";
-  cardio.style.display = "flex";
+  strength.style.backgroundColor = "blue";
+  strecthing.style.backgroundColor = "blue";
+  cardio.style.backgroundColor = "blue";
   // window.location.reload;
 });
-export const strengthURL = strength.addEventListener("click", function (e) {
+strength.addEventListener("click", function (e) {
   container.style.backgroundColor = "pink";
-  console.log(e.currentTarget);
-
-  strecthing.style.display = "flex";
-  cardio.style.display = "none";
-  reset.style.display = "none";
-  if (e.currentTarget === this) {
-    console.log("This works and you clicked on the strength  button");
-    // return console.log(this);
-  }
-  // urls(this);
+  strength.style.backgroundColor = "pink";
+  strecthing.style.backgroundColor = "blue";
+  cardio.style.backgroundColor = "blue";
 });
 
 // export const refreshButton = document.querySelector("#refresh-button");

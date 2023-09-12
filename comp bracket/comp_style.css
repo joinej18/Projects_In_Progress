@@ -35,6 +35,19 @@
   display: none;
 }
 
+#user-type {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: rgba(22, 33, 44, 0.5);
+  color: white;
+  display: flex;
+  font-size: larger;
+  width: 400px;
+  height: 300px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
 #quiz-container {
   align-content: center;
   background: yellow;
@@ -46,7 +59,7 @@
   border-radius: 25px;
   overflow: hidden;
 }
-#question-container {
+#name-question {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -55,6 +68,80 @@
   width: auto;
   height: auto;
   margin: auto;
+  text-align: center;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+#age-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: inherit;
+}
+#weight-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: inherit;
+}
+#years-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: inherit;
+}
+#martial-arts-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: inherit;
+}
+#comp-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: inherit;
+}
+#belt-question {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  padding: 25px;
+  background: black;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
   text-align: center;
   border-radius: inherit;
 }
@@ -76,7 +163,16 @@ input {
   align-items: space-evenly;
 }
 
+/* .active {
+  background: white;
+  cursor: pointer;
+}
+
+.active:hover {
+  transform: all 5s ease-in;
+} */
 #back {
+  align-items: center;
   color: aliceblue;
   width: 45px;
   border-radius: 15px;
@@ -85,6 +181,7 @@ input {
 }
 #forward {
   color: aliceblue;
+  align-items: center;
   width: 45px;
   border-radius: 15px;
   margin: auto;

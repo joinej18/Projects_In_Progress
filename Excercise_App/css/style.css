@@ -137,6 +137,15 @@ a {
 
   justify-content: center;
 }
+.resetURL {
+  padding: 5px;
+  margin: auto;
+  display: flex;
+
+  height: fit-content;
+
+  justify-content: center;
+}
 
 .btn:hover,
 .btn-dark {
@@ -334,6 +343,35 @@ input[type="checkbox"] {
 }
 #active {
   opacity: 1;
+}
+
+#main-footer {
+  background: #333;
+  color: #fff;
+  height: 5rem;
+}
+#main-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+#main-footer .footer-content i {
+  color: white;
+}
+#main-footer .footer-content .social .fab {
+  margin-right: 1rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0.5rem;
+}
+#main-footer .footer-content .social .fab:hover {
+  background: #ffbc00;
+  color: #fff;
 }
 
 /* AFTER Rendered Workout */

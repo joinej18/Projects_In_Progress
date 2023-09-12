@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        p{
+            display: inline-block;
+        }
+      .container {
+        margin: auto;
+        padding-top: 100px;
+        justify-items: center;
+        align-content: center;
+        background-color: green;
+        width: 500px;
+        height: 300px;
+      }
+      .toggle-bg {
+        background-color: grey;
+        margin: auto;
+        width: 400px;
+        height: 150px;
+        border-radius: 75px 75px 75px 75px;
+      }
+
+      .circle-pink {
+        background-color: pink;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        float: left;
+      }
+      .circle-brown {
+        background: brown;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toggle-bg">
+        <div class="circle-pink">
+      </div>
+    </div>
+
+    <!-- <div class="buttons">
+        <div class="employee-name">
+            <p>Josh Joiner</p>
+        </div>
+        <button id="clock-in">Clock In</button>
+        <button id="clock-out">Clock Out</button>
+    </div> -->
+    <div class="container">
+        <button id="new-employee">Add Employee</button>
+     <div class="search-bar"><input type="text">
+    <button>Search</button>
+    <button>Clear</button></div>
+
+    <div class="buttons">
+        <div id="id-titles">
+            <p>NAME</p>
+            <p>CLOCK IN</p>
+            <p>CLOCK OUT</p>
+        </div>
+        <div class="employee">
+            <p class="name">Josh Joiner</p>
+            <p class="clock-in"> 12PM</p>
+            <p class="clock-out">3PM</p>
+        </div>
+        <button id="clock-in">Clock In</button>
+        <button id="clock-out">Clock Out</button>
+    </div>
+    <script src="toggle.js"></script>
+  </body>
+</html>

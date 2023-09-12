@@ -16,7 +16,7 @@ export const options = {
     "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
   },
 };
-
+let workout = 1;
 // Function to Render Excercises from API
 const instructDOM = document.querySelector(".instructions-btn");
 function MarkupRender(data) {
@@ -27,7 +27,7 @@ function MarkupRender(data) {
     const difficulty = (difficultyDOM.textContent = element.difficulty);
 
     const markup = `<div class="checkbox-div">
-    <input type="checkbox" id="workout-option" name="option" value="option" />
+    <input type="checkbox" checked id="workout-option" name="option" value="option" />
             <label for="workout-option"> Select Your Exercise</label><br /><div class="workout-card" id="rendered">
       <input type="checkbox" id="workout-option" name="option" value="option" />
             <label for="workout-option"> Select Your Exercise</label><br />
@@ -36,7 +36,7 @@ function MarkupRender(data) {
               <p class="type">Lifting Type:${type}</p>
               <p class="difficulty">Level: ${difficulty}</p>
               <p>Equipment: ${element.equipment}</p>
-              <p>Instructions: <button class=instructions-btn><i class="fa-solid fa-circle-question"></i></button></p>
+              <p>Instructions: <button class=instructions-btn><i class="fa-solid fa-circle-question ${workout++}"></i></button></p>
             </div>
 </div>
             <div class="workout-card instruct" id="rendered-instruct">
@@ -45,25 +45,24 @@ function MarkupRender(data) {
             
             `;
 
-    console.log(instructDOM);
     const workoutDisplay = parentEl.insertAdjacentHTML("afterbegin", markup);
     const cb = document.getElementById("workout-option");
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        console.log(true);
-      } else {
-        console.log("nothing is selected");
-      }
-    });
+    // addEventListener("change", function () {
+    //   if (checkbox.checked) {
+    //     console.log(true);
+    //   } else {
+    //     console.log("nothing is selected");
+    //   }
+    // });
 
     workoutDisplay;
   });
 }
 
-const savedWorkout = () => {
-  const workout = [];
-  workout.forEach(localStorage.setItem("workout", name));
-};
+// const savedWorkout = () => {
+//   const workout = [];
+//   workout.forEach(localStorage.setItem("workout", name));
+// };
 // const checked =
 //   if (this.checked === true) {
 //     console.log(true);
@@ -77,7 +76,8 @@ const savedWorkout = () => {
 export const loadMuscleGroup = async function (muscle) {
   try {
     const res = await fetch(
-      `${API_URL}difficulty=intermediate&&muscle=${muscle}`,
+      `${API_URL}level=intermediate&&type=powerlifting&&muscle=${muscle}`,
+      // `${API_URL}difficulty=intermediate&&muscle=${muscle}`,
       options
     );
     // const res = await fetch(
@@ -86,7 +86,11 @@ export const loadMuscleGroup = async function (muscle) {
     // );
     const data = await res.json();
     const renderedWorkout = data;
-    console.log(data);
+    if (renderedWorkout.length > 0) {
+      console.log(renderedWorkout);
+    } else {
+      alert(`No excercise was found for ${muscle} for that level and type`);
+    }
     localStorage.setItem("workout", renderedWorkout);
 
     MarkupRender(data);
@@ -104,57 +108,72 @@ export const loadMuscleGroup = async function (muscle) {
     throw err;
   }
 };
-export const loadCardioGroup = async function (event, muscle) {
-  try {
-    // if (event == value){
-    //     let res = await fetch(
-    //   `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=cardio&&muscle=${muscle}`,
-    //   options
-    // );
-    // }
-    console.log(e);
-    let res = await fetch(
-      `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=cardio&&muscle=${muscle}`,
-      options
-    );
-    const data = await res.json();
+// export const loadCardioGroup = async function (event, muscle) {
+//   try {
+//     // if (event == value){
+//     //     let res = await fetch(
+//     //   `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=cardio&&muscle=${muscle}`,
+//     //   options
+//     // );
+//     // }
+//     console.log(e);
+//     let res = await fetch(
+//       `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=cardio&&muscle=${muscle}`,
+//       options
+//     );
+//     const data = await res.json();
 
-    // for (let i = 0; i > data.length; i++) {
-    //   localStorage.setItem("example", i);
-    // }
-    console.log(data);
-    MarkupRender(data);
-  } catch (err) {
-    throw err;
+//     // for (let i = 0; i > data.length; i++) {
+//     //   localStorage.setItem("example", i);
+//     // }
+//     console.log(data);
+//     MarkupRender(data);
+//   } catch (err) {
+//     throw err;
+//   }
+// };
+
+// export const loadStrecthingGroup = async function (muscle) {
+//   try {
+//     const res = await fetch(
+//       `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=stretching&&muscle=${muscle}`,
+//       options
+//     );
+//     const data = await res.json();
+
+//     console.log(data);
+//     MarkupRender(data);
+//     checkbox.addEventListener("change", function () {
+//       if (this.checked === true) {
+//         console.log(true);
+//       } else {
+//         console.log("nothing is selected");
+//       }
+//     });
+//   } catch (err) {
+//     throw err;
+//   }
+// };
+
+addEventListener("click", (e) => {
+  const target = e.target;
+  console.log(target);
+
+  if (target == "10") {
+    alert("The instructions button was clicked");
   }
-};
+});
 
-export const loadStrecthingGroup = async function (muscle) {
-  try {
-    const res = await fetch(
-      `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?type=stretching&&muscle=${muscle}`,
-      options
-    );
-    const data = await res.json();
+addEventListener("change", (e) => {
+  const levelValue = document.querySelector("#difficulty").value;
+  const difficultyValue = document.querySelector("#difficulty").value;
 
-    console.log(data);
-    MarkupRender(data);
-    checkbox.addEventListener("change", function () {
-      if (this.checked === true) {
-        console.log(true);
-      } else {
-        console.log("nothing is selected");
-      }
-    });
-  } catch (err) {
-    throw err;
-  }
-};
-
-window.addEventListener("change", function (event) {
-  if (event === true) {
-    console.log(true);
-  } else {
-    console.log(event.name);
+  if (levelValue && difficultyValue) {
+    // alert(levelValue);
+    if (levelValue == "beginner" && difficultyValue == "powerlifting")
+      console.log(
+        `The selected level is ${levelValue} and the difficulty is ${difficultyValue}`
+      );
+    return (API_URL = `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?level=beginner&&type=powerlifting&&muscle=${muscle}`);
   }
 });

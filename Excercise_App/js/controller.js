@@ -6,14 +6,18 @@ import {
   searchTitle,
   muscleDOM,
   cardio,
+  resetBttn,
 } from "./variables.js";
 import { options, loadMuscleGroup } from "./model.js";
 import { checkbox } from "./variables.js";
 
 changeInDay();
 options;
-
+const searchMuscle = document.querySelector("#muscle-group").value;
 btnSubmitWorkout.style.display = "none";
+resetBttn.addEventListener("click", (e) => {
+  const searchMuscle = (document.querySelector("#muscle-group").value = "");
+});
 showAllBttn.addEventListener("click", function (muscle) {
   const searchMuscle = document.querySelector("#muscle-group").value;
   if (!searchMuscle) {
@@ -27,19 +31,3 @@ showAllBttn.addEventListener("click", function (muscle) {
     btnSubmitWorkout.style.display = "";
   }
 });
-
-// window.addEventListener("click", function (event) {
-//   // console.log(document.querySelectorAll("input[type=checkbox]"));
-//   console.log(document.getElementById("rendered").textContent);
-//   if (event.target === "workout-option") {
-//     console.log("This is true");
-//   }
-// });
-
-// refreshButton.addEventListener("click", refreshPage);
-// cardio.addEventListener("click", function (e) {
-//   // container.style.backgroundColor = "red";
-//   strecthing.style.display = "none";
-//   strength.style.display = "none";
-//   reset.style.display = "flex";
-// });
