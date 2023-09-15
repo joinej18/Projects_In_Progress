@@ -26,6 +26,8 @@ import { date, timeOfDay } from "./variables.js";
 //   "December",
 // ];
 
+console.log(date.toLocaleDateString("en-US")); // M/D/YYYY
+
 const timePeriods = [
   "Morning",
   "Late Morning",
@@ -34,6 +36,7 @@ const timePeriods = [
   "Evening",
   "Late Evening",
 ];
+
 export const changeInDay = function () {
   const hour = date.getHours();
   if (hour <= 3 && hour < 4) {
